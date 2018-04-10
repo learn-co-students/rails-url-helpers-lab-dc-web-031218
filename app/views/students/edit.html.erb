@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Favorite Food</title>
+  </head>
+
+  <body>
+
+
+    <form method="patch">
+      <p><%= @student.first_name %> is currently
+        <% if @student.active %>
+          <%= " active." %>
+        <% else %>
+          <%= " inactive." %>
+        <% end %></p>
+        <%= link_to "Click to change the status", student_path(@student)%>
+      <!-- <p>Select status from the drop down: </br>
+      <select id="activate_student_path" name="activate">
+        <option value="true">Active</option>
+        <option value="false">Not Active</option>
+      </select> -->
+      <!-- <input id="hidden" type="hidden" name="_method" value="post">
+      <input type="submit"> -->
+    </form>
+
+  </body>
+</html>
