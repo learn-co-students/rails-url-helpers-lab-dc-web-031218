@@ -1,5 +1,10 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+  <% if student == nil %>
+  	<p>There is no student here.</p>
+  	<% else %>
+    <h1><%= link_to student.to_s, student_path(student) %></h1>
+  <% end %>
+  
   <% end %>
 </div>
