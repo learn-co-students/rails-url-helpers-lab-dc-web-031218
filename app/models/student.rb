@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
 
-	def activate
+	def activate!
 		self.active = !self.active
 		self.save
 	end
